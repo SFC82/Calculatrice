@@ -29,7 +29,7 @@ public class Calculatrice {
     {
         double result = 0;
         
-        try (Scanner scanner = new Scanner (System.in)){
+        Scanner scanner = new Scanner (System.in);
 	        
         	System.out.println("please enter number 1: ");
 	        double number1 = scanner.nextDouble();
