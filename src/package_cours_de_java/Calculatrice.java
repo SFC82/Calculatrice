@@ -1,22 +1,43 @@
 package package_cours_de_java;
-
+import java.util.Scanner;
 public class Calculatrice {
 	public Calculatrice()
+	
 	{
 		System.out.println("Contructor called");
 	}
     
     public double addition()
     {
+    	
         double result = 0;
-        //TODO implement the addition function here ...
+        try (Scanner scanner = new Scanner (System.in)){
+	        
+        	System.out.println("please enter number 1: ");
+	        double number1 = scanner.nextDouble();
+	        
+	        System.out.println("please enter number 2: ");
+	        double number2 = scanner.nextDouble();
+	        
+	        result = number1 + number2;
+            
         
-        return result;
+       return result;
     }
     
     public double soustraction()
     {
         double result = 0;
+        
+        try (Scanner scanner = new Scanner (System.in)){
+	        
+        	System.out.println("please enter number 1: ");
+	        double number1 = scanner.nextDouble();
+	        
+	        System.out.println("please enter number 2: ");
+	        double number2 = scanner.nextDouble();
+	        
+	        result = number1 - number2;
         //TODO implement the soustraction function here ...
         
         return result;
