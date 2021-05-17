@@ -23,7 +23,7 @@ public class Calculatrice {
             
         
        return result;
-    
+    }
     
     public double soustraction()
     {
@@ -66,4 +66,4 @@ public class Calculatrice {
         
         return result;
     }
-}
+    }
