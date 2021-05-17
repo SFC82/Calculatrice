@@ -17,7 +17,7 @@ public class Calculatrice {
 	   double number1 = scanner.nextDouble();
 	        
 	   System.out.println("please enter number 2: ");
-	   ouble number2 = scanner.nextDouble();
+	   double number2 = scanner.nextDouble();
 	        
 	   result = number1 + number2;
             
@@ -31,13 +31,13 @@ public class Calculatrice {
         
         Scanner scanner = new Scanner (System.in);
 	        
-        System.out.println("please enter number 1: ");
-	    double number1 = scanner.nextDouble();
+        System.out.println("please enter value 1: ");
+	    double value1 = scanner.nextDouble();
 	        
-	    System.out.println("please enter number 2: ");
-	    double number2 = scanner.nextDouble();
+	    System.out.println("please enter value 2: ");
+	    double value2 = scanner.nextDouble();
 	        
-	    result = number1 - number2;
+	    result = value1 - value2;
         //TODO implement the soustraction function here ...
         
         return result;
