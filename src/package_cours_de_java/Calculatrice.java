@@ -64,7 +64,7 @@ public class Calculatrice {
     public double division()
     {
         double result = 0.0;
-        //TODO implement the division function here ...
+        System.out.println("pas implemente");
         
         return result;
     }
