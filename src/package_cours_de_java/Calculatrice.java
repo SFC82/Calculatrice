@@ -4,7 +4,7 @@ public class Calculatrice {
 	public Calculatrice()
 	
 	{
-		System.out.println("Contructor called");
+		System.out.println("Constructor called");
 	}
     
     public double addition()
