@@ -73,7 +73,15 @@ public class Calculatrice {
     {
         int result = 0;
         //TODO implement the modulo function here ...
-        
+        double nbre1, nbre2, resultat;
+		Scanner scannerVariable = new Scanner(System.in);
+
+		System.out.println("Entrez votre premier nombre.");
+		nbre1=scannerVariable.nextDouble();
+		System.out.println("Entrez votre deuxieme nombre.");
+		nbre2=scannerVariable.nextDouble();
+		resultat=nbre1 % nbre2;
+		System.out.println("Le resultat est: " + resultat);
         return result;
     }
     }
