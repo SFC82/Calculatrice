@@ -45,10 +45,20 @@ public class Calculatrice {
     
     public double multiplication()
     {
+    	Scanner Scan= new Scanner(System.in);
+    	double nombre1 ,double nombre2;
         double result = 0;
+        System.out.print("entrer le premier nombre1: ");
+		nombre1 = Scan.nextDouble();
+		System.out.print("entrer le deuxieme nombre2: ");
+		nombre2= Scan.nextDouble();
+		Scan.close();
+		result= nombre1*nombre2;
+		System.out.println("la multiplication de (" + nombre1 + ")*(" + nombre2 + ") est = " + result);
+		return result;
         //TODO implement the multiplication function here ...
         
-        return result;
+        
     }
     
     public double division()
