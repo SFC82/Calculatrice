@@ -10,16 +10,16 @@ public class Calculatrice {
     public double addition()
     {
     	
-        double result = 0;
-        Scanner scanner = new Scanner (System.in);
+       double result = 0;
+       Scanner scanner = new Scanner (System.in);
 	        
-        	System.out.println("please enter number 1: ");
-	        double number1 = scanner.nextDouble();
+       System.out.println("please enter number 1: ");
+	   double number1 = scanner.nextDouble();
 	        
-	        System.out.println("please enter number 2: ");
-	        double number2 = scanner.nextDouble();
+	   System.out.println("please enter number 2: ");
+	   ouble number2 = scanner.nextDouble();
 	        
-	        result = number1 + number2;
+	   result = number1 + number2;
             
         
        return result;
@@ -31,13 +31,13 @@ public class Calculatrice {
         
         Scanner scanner = new Scanner (System.in);
 	        
-        	System.out.println("please enter number 1: ");
-	        double number1 = scanner.nextDouble();
+        System.out.println("please enter number 1: ");
+	    double number1 = scanner.nextDouble();
 	        
-	        System.out.println("please enter number 2: ");
-	        double number2 = scanner.nextDouble();
+	    System.out.println("please enter number 2: ");
+	    double number2 = scanner.nextDouble();
 	        
-	        result = number1 - number2;
+	    result = number1 - number2;
         //TODO implement the soustraction function here ...
         
         return result;
