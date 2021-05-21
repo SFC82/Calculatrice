@@ -1,8 +1,7 @@
 package package_cours_de_java;
 import java.util.Scanner;
 public class Calculatrice {
-	public Calculatrice()
-	
+	public Calculatrice()	
 	{
 		System.out.println("Constructor called");
 	}
@@ -21,7 +20,8 @@ public class Calculatrice {
 	        
 	   result = number1 + number2;
             
-        
+	   scanner.close();
+	   
        return result;
     }
     
@@ -39,14 +39,14 @@ public class Calculatrice {
 	        
 	    result = value1 - value2;
         //TODO implement the soustraction function here ...
-        
+	    scanner.close();
         return result;
     }
     
     public double multiplication()
     {
     	Scanner Scan= new Scanner(System.in);
-    	double nombre1 ,double nombre2;
+    	double nombre1, nombre2;
         double result = 0;
         System.out.print("entrer le premier nombre1: ");
 		nombre1 = Scan.nextDouble();
@@ -82,6 +82,51 @@ public class Calculatrice {
 		nbre2=scannerVariable.nextDouble();
 		resultat=nbre1 % nbre2;
 		System.out.println("Le resultat est: " + resultat);
+		scannerVariable.close();
         return result;
     }
+    
+    public void test()
+    {
+    	Scanner operation = new Scanner(System.in);
+		System.out.println("addition");
+		System.out.println("soustraction");
+		System.out.println("division");
+		System.out.println("multiplication");
+		System.out.println("modulo");
+		System.out.println("Exit");
+		System.out.println("Please Select Operation:");
+
+		while(operation.hasNext() ){
+			String userChoice = operation.next();
+			switch (userChoice) {
+				case "addition" -> {
+					System.out.println(this.addition());
+					System.out.println("Please Select Operation");
+				}
+				case "soustraction" -> {
+					System.out.println(this.soustraction());
+					System.out.println("Please Select Operation");
+				}
+				case "division" -> {
+					System.out.println(this.division());
+					System.out.println("Please Select Operation");
+				}
+				case "multiplication" -> {
+					System.out.println(this.multiplication());
+					System.out.println("Please Select Operation");
+				}
+				case "modulo" -> {
+					System.out.println(this.modulo());
+					System.out.println("Please Select Operation");
+				}
+				case "Exit" -> {
+					System.out.println("Thank you");
+					System.exit(0);
+				}
+				default -> System.out.println("ERROR: Please Select Operation");
+			}
+		}
+		operation.close();
     }
+}
