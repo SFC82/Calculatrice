@@ -23,7 +23,7 @@ public class Search {
 	{
 		//TODO: please just sort no need to print the sorted list here.
 		int change= 0;
-		int [] population_sorted = new int[population_size];
+		int [] population_ages = new int[population_size];
 		for(int i=0; i<population_size; i++){
 			for(int j= i+1; j<population_size; j++){
 				if(population_ages[i] > population_ages[j])
