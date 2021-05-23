@@ -22,6 +22,20 @@ public class Search {
 	public void sort_by_age()
 	{
 		//TODO: please just sort no need to print the sorted list here.
+		int change= 0;
+		int [] population_sorted = new int[population_size];
+		for(int i=0; i<population_size; i++){
+			for(int j= i+1; j<population_size; j++){
+				if(population_ages[i] > population_ages[j])
+				{
+					change = population_ages[j];
+					population_ages[j] = population_ages[i];
+					population_ages[i] = change;
+				}
+
+			}
+
+		}
 	}
 	
 	public int find_by_age(int age_to_find)
