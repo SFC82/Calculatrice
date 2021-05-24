@@ -24,6 +24,20 @@ public class Search {
 	public void sort_by_age()
 	{
 		//TODO: please just sort no need to print the sorted list here.
+		int change= 0;
+		int [] population_ages = new int[population_size];
+		for(int i=0; i<population_size; i++){
+			for(int j= i+1; j<population_size; j++){
+				if(population_ages[i] > population_ages[j])
+				{
+					change = population_ages[j];
+					population_ages[j] = population_ages[i];
+					population_ages[i] = change;
+				}
+
+			}
+
+		}
 	}
 	public int getPopulation_ages() {
 		return this.population_ages;
