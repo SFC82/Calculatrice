@@ -2,6 +2,8 @@ package package_cours_de_java;
 
 import java.util.Arrays;
 
+import classetest.$missing$;
+
 
 
 public class Search {
@@ -23,14 +25,25 @@ public class Search {
 	{
 		//TODO: please just sort no need to print the sorted list here.
 	}
-	
+	public int getPopulation_ages() {
+		return this.population_ages;
+	}
+	public void setFopulation_ages(int[] population_ages) {
+		this.population_ages= population_ages;
+	}
 	public int find_by_age(int age_to_find)
 	{		
 		int pos = -1;
-		//TODO if found return the position if not return -1
-		
+		for(int pop_indexer=0; pop_indexer<=population_ages.length; pop_indexer++) {
+			
+			if(population_age[pop_indexer]==age_to_find) {
+				System.out.println(pop_indexer);
+			}
+			else {
 		return pos;		
 	}
+			}
+		}
 	
 	public String toString()
 	{
