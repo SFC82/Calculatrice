@@ -23,6 +23,8 @@ public class MainClass {
 		
 		System.out.println("Age "+age_to_search+" ist on position "+searching.find_by_age(age_to_search));
 		scanner.close();
+		
+		searching.getPopulation_size();
 	}
 
 }
