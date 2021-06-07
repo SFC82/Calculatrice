@@ -46,6 +46,12 @@ public class MainClass {
 		{
 			System.out.print("p("+population.population[i].getAge() + "," +population.population[i].getWeight()+") " );
 		}
+
+		Person Jc = new Person();// Jc est une personne avec des caracteristiques aleatoire pouvant ou pas coincider avec une personne dans la population existante.
+		Jc.setAge((int)(Math.random()*100));
+		Jc.setWeight((int)(Math.random()*100));
+		System.out.print(population.find_person(Jc));
 	}
+
 
 }
