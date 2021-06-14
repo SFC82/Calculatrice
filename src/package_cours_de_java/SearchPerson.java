@@ -40,7 +40,11 @@ public class SearchPerson {
 	public int find_person(Person person)
 	{
 		int pos = -1;
-		// TODO: find the person with matched age and weight 
+		for(int indexer=0; indexer<population_size-1; indexer++) {
+			if(population[indexer]==person) {
+			 pos= indexer;
+			}
+		}
 		return pos;
 	}
 	
