@@ -1,6 +1,8 @@
 package Personn;
 
 import java.util.Date;
+import Bibliothek.Media;
+
 
 public class Student extends Person {
     private String matricle;
@@ -12,6 +14,17 @@ public class Student extends Person {
         this.matricle =_matricle;
         this.filiere= _filiere;
     }
-
+    public void acheter (int betrag,  Media  media) {
+		 if (media.istverfügbar() )
+			 
+			 {
+			 System.out.println("acheter");
+			 }
+		 else {
+			 System.out.println("nicht VBerfügbar");
+		 }
+		 
+	}
+	
 
 }
