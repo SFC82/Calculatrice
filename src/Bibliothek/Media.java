@@ -7,6 +7,7 @@ public class Media {
     private Date dateLoc;
     private int  frais;
     private boolean achetable;
+    private boolean inOrdnung;
 
     public Media (String _id, Date _dateLoc,int _frais,boolean _achetable )
     {
@@ -18,20 +19,20 @@ public class Media {
 
     public boolean isVerkauft()
     {
-        return true;
+        return achetable;
     }
     public boolean isreserviert()
     {
-        return true;
+        return dateLoc != null;
     }
 
-    public boolean isVerfügbar()
+    public boolean isVerfuegbar()
     {
-        return true;
+        return !isVerkauft() && !isreserviert();
     }
 
     public boolean isInOrdnung()
     {
-        return true;
+        return inOrdnung;
     }
 }
