@@ -15,13 +15,13 @@ public class Student extends Person {
         this.filiere= _filiere;
     }
     public void acheter (int betrag,  Media  media) {
-		 if (media.istverfügbar() )
+		 if (media.isVerfuegbar() )
 			 
 			 {
 			 System.out.println("acheter");
 			 }
 		 else {
-			 System.out.println("nicht VBerfügbar");
+			 System.out.println("nicht VBerfï¿½gbar");
 		 }
 		 
 	}
