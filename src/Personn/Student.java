@@ -15,7 +15,7 @@ public class Student extends Person {
         this.filiere= _filiere;
     }
     public void acheter (int betrag,  Media  media) {
-		 if (media.istverf�gbar() )
+		 if (media.isVerfuegbar() )
 			 
 			 {
 			 System.out.println("acheter");
