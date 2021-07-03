@@ -26,4 +26,16 @@ public class Student extends Person {
 			 System.out.println("nicht VBerfugbar");
 		 }
 	}
+	public void remettre(Media media)
+	{
+		if(media.isInOrdnung())
+		{
+			System.out.println("Das Buch wurde zerstört")
+		}
+		else
+		{
+			System.out.println("Das Buch annehmen")
+		}
+	}
+	
 }
