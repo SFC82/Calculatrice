@@ -13,6 +13,12 @@ public class Personnel extends Person {
        this.personnelNumber= _personnelNumber;
        this.post= _post;
     }
-
+    public void verifikation(boolean zustand, Media x) {
+		if(zustand == true)	{
+			System.out.println("Media" + x + "is ok");
+    	}
+    	else {
+    		System.out.println("Media" + x + "is'nt ok");
+    	}
 
 }

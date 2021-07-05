@@ -27,6 +27,7 @@ public class Media {
 
     public boolean isVerkauft()
     {
+    	
        // if(position.equals("verkauft"))
         return achetable;
     }
@@ -48,6 +49,15 @@ public class Media {
     {
         return inOrdnung;
     }
-
+    
+    public int getfrais(){
+    	
+    	return frais;
+    }
+    public int setfrais() 
+    {
+    	return frais;
+    	
+    }
 
 }
