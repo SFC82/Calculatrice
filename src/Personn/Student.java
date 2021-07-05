@@ -51,7 +51,6 @@ public class Student extends Person {
 						System.out.println("remboursement" +remboursement);
 						System.out.println("media ist nicht in Ordnung");
 					}
-					//System.out.print("media ist in Ordnung");
 					else if(betrag = media.getfrais())
 					{
 						System.out.println(" merci pour votre Achat du" +media._id);
