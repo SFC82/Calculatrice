@@ -17,9 +17,51 @@ public class Student extends Person {
 	
 	public void acheter (int betrag,  Media  media) 
 	{
-		 if (media.isVerfuegbar())
+		 if(media.isVerfuegbar())
 		 {
-			 System.out.println("acheter");
+			 if(media.isreserviert())
+			 {
+				 System.out.println("Media ist Schön reserviert");
+			 }
+			 else 
+			 {
+				if(media.isInOrdnung()) 
+				{
+					if(betrag>media.getfrais())
+					{
+						int remboursement = betrag - media.getfrais();
+						System.out.println("remboursement" +remboursement);
+						System.out.println("media ist in Ordnung");
+					}
+					else if(betrag = media.getfrais())
+					{
+						System.out.println(" merci pour votre Achat du" +media._id);
+						System.out.println("media ist in Ordnung");
+					}
+					else
+					{
+						System.out.println("fehler");
+					}
+				}
+				else 
+				{
+					if(betrag>media.getfrais())
+					{
+						int remboursement = betrag - media.getfrais();
+						System.out.println("remboursement" +remboursement);
+						System.out.println("media ist nicht in Ordnung");
+					}
+					else if(betrag = media.getfrais())
+					{
+						System.out.println(" merci pour votre Achat du" +media._id);
+						System.out.println("media ist nicht in Ordnung");
+					}
+					else
+					{
+						System.out.println("fehler");
+					}
+				}
+			}
 		 }
 		 else 
 		 {
