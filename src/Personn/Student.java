@@ -83,7 +83,7 @@ public class Student extends Person {
     {
         if(x.isVerfuegbar() && x.isInOrdnung())
         {
-            System.out.println("The Student" + " "); //+ super.getName()+ " " + super.getSurname()+ " " + "with matricle" + " "+ this.matricle+ " " + "on the"+" "+ x.dateLoc);
+            System.out.println("The Student" + " "); //+ super.getName()+ " " + super.getSurname()+ " " + "with matricle" + " "+ matricle+ " " + "on the"+" "+ x.dateLoc);
         }
         else
             System.out.println( "actually not available");
