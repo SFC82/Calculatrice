@@ -30,12 +30,26 @@ public class Student extends Person {
 	{
 		if(media.isInOrdnung())
 		{
-			System.out.println("Das Buch wurde zerstört")
+			System.out.println("Das Buch wurde zerstört");
 		}
 		else
 		{
-			System.out.println("Das Buch annehmen")
+			System.out.println("Das Buch annehmen");
 		}
 	}
+    public void location(Media x)
+    {
+        if(x.isVerfuegbar() && x.isInOrdnung())
+        {
+            System.out.println("The Student" + " "); //+ super.getName()+ " " + super.getSurname()+ " " + "with matricle" + " "+ this.matricle+ " " + "on the"+" "+ x.dateLoc);
+        }
+        else
+            System.out.println( "actually not available");
+    }
+    public static boolean reserved(Media x)
+    {
+            return x.isVerfuegbar() && x.isInOrdnung();
+
+    }
 	
 }
