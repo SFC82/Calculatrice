@@ -3,7 +3,7 @@ package Bibliothek;
 import java.util.Date;
 
 public class Media {
-    private String ID;
+    final private String ID;
     private Date dateLoc;
     private int  frais;
     private boolean achetable;
@@ -60,4 +60,7 @@ public class Media {
     	
     }
 
+    public String getID() {
+        return ID;
+    }
 }

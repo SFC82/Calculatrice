@@ -21,7 +21,7 @@ public class Student extends Person {
 		 {
 			 if(media.isreserviert())
 			 {
-				 System.out.println("Media ist Schön reserviert");
+				 System.out.println("Media ist Schï¿½n reserviert");
 			 }
 			 else 
 			 {
@@ -33,9 +33,9 @@ public class Student extends Person {
 						System.out.println("remboursement" +remboursement);
 						System.out.println("media ist in Ordnung");
 					}
-					else if(betrag = media.getfrais())
+					else if(betrag == media.getfrais())
 					{
-						System.out.println(" merci pour votre Achat du" +media._id);
+						System.out.println(" merci pour votre Achat du" + media.getID());
 						System.out.println("media ist in Ordnung");
 					}
 					else
@@ -51,9 +51,9 @@ public class Student extends Person {
 						System.out.println("remboursement" +remboursement);
 						System.out.println("media ist nicht in Ordnung");
 					}
-					else if(betrag = media.getfrais())
+					else if(betrag == media.getfrais())
 					{
-						System.out.println(" merci pour votre Achat du" +media._id);
+						System.out.println(" merci pour votre Achat du" +media.getID());
 						System.out.println("media ist nicht in Ordnung");
 					}
 					else
@@ -72,7 +72,7 @@ public class Student extends Person {
 	{
 		if(media.isInOrdnung())
 		{
-			System.out.println("Das Buch wurde zerstört");
+			System.out.println("Das Buch wurde zerstï¿½rt");
 		}
 		else
 		{
