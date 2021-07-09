@@ -1,66 +1,75 @@
 package Bibliothek;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Media {
     final private String ID;
     private Date dateLoc;
     private int  frais;
-    private boolean achetable;
-    private boolean inOrdnung;
-    private String position;
+    private Statut position;
+    private ArrayList<Media>  repertoire;
 
-    public Media (String _id, Date _dateLoc,int _frais,boolean _achetable )
+
+
+    public Media (String _id,int _frais, Statut position )
     {
         this.ID= _id;
-        this.dateLoc= _dateLoc;
         this.frais = _frais;
-        this.achetable= _achetable;
-    }
-    public String getPosition() {
-        return position;
+        this.position= position;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
-    }
 
     public boolean isVerkauft()
     {
-    	
-       // if(position.equals("verkauft"))
-        return achetable;
+        return position.equals(Statut.VERKAUFT);
     }
     public boolean isreserviert()
     {
-       // if(position.equals("reserviert"))
-        return dateLoc != null;
+       return position.equals(Statut.RESERVIERT);
     }
 
     public boolean isVerfuegbar()
     {
-        if(position.equals("verfuegbar")) {
-            return !isVerkauft() && !isreserviert();
-        }
-        return false;
+        return position.equals(Statut.VERFUEGBAR);
     }
 
     public boolean isInOrdnung()
     {
-        return inOrdnung;
+        return position.equals(Statut.INORDNUNG) ;
     }
     
-    public int getfrais(){
-    	
-    	return frais;
+    public int getfrais()
+    {
+        return frais;
     }
     public int setfrais() 
     {
     	return frais;
-    	
     }
 
-    public String getID() {
+    public String getID()
+    {
         return ID;
+    }
+
+    public Statut getPosition()
+    {
+        return position;
+    }
+
+    public void setPosition(Statut position)
+    {
+        this.position = position;
+    }
+
+    public Date getDateLoc()
+    {
+        return dateLoc;
+    }
+
+    public void setDateLoc(Date dateLoc)
+    {
+        this.dateLoc = dateLoc;
     }
 }

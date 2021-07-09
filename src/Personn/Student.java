@@ -2,11 +2,13 @@ package Personn;
 
 import java.util.Date;
 import Bibliothek.Media;
-
+import Bibliothek.Statut;
 
 public class Student extends Person {
     private String matricle;
     private String filiere;
+
+
 
 	public Student(String _name, String _surname, Date _date, String _sex, String _matricle, String _filiere)
 	{
@@ -93,5 +95,7 @@ public class Student extends Person {
             return x.isVerfuegbar() && x.isInOrdnung();
 
     }
+
+
 	
 }
