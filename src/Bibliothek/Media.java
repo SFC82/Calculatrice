@@ -8,15 +8,21 @@ public class Media {
     private Date dateLoc;
     private int  frais;
     private Statut position;
-    private ArrayList<Media>  repertoire;
-
+    private boolean inOrdnung;
 
 
     public Media (String _id,int _frais, Statut position )
     {
-        this.ID= _id;
+        this.ID = _id;
         this.frais = _frais;
         this.position= position;
+    }
+    public Media (String _id,int _frais, Statut position,Date _dateLoc)
+    {
+        this.ID = _id;
+        this.frais = _frais;
+        this.position = position;
+        this.dateLoc = _dateLoc;
     }
 
 
@@ -36,7 +42,7 @@ public class Media {
 
     public boolean isInOrdnung()
     {
-        return position.equals(Statut.INORDNUNG) ;
+        return inOrdnung ;
     }
     
     public int getfrais()

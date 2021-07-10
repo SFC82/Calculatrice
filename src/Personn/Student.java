@@ -1,5 +1,6 @@
 package Personn;
 
+import java.util.ArrayList;
 import java.util.Date;
 import Bibliothek.Media;
 import Bibliothek.Statut;
@@ -7,6 +8,7 @@ import Bibliothek.Statut;
 public class Student extends Person {
     private String matricle;
     private String filiere;
+    private ArrayList<Media> repertoire;
 
 
 
@@ -95,6 +97,8 @@ public class Student extends Person {
             return x.isVerfuegbar() && x.isInOrdnung();
 
     }
+
+
 
 
 	
