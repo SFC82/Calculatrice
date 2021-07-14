@@ -99,10 +99,10 @@ public class Student extends Person {
 			case VERFUEGBAR:
 				if (x.isInOrdnung())
 				{
-					System.out.print ("Media" + x +"has been rented on" + thisDate.toString());
+					System.out.print ("Media" + x +"wurde reserviert am" + thisDate.toString());
 					thisDate.setMonth(thisDate.getMonth() + 2);// les mois vont de 0 a 11 et faire l'année -1900 avant de l'entrée.
 					remiseDate = thisDate;
-					System.out.print("Media" +x+ "must be returned on" + remiseDate.toString());
+					System.out.print("Media" + x + "muss zurückgegeben am" + remiseDate.toString());
 					repertoire.remove(x);
 					x.setPosition(Statut.VERMIETET);
 				}
@@ -115,7 +115,7 @@ public class Student extends Person {
 		{
 			Date reservDate = new Date();
 			x.setPosition(Statut.RESERVIERT);
-			System.out.println("Sie haben das Media" + x+ "on" + reservDate + "reserviert");
+			System.out.println("Sie haben das Media" + x+ "am" + reservDate + "reserviert");
 		}
 		else
 		{
