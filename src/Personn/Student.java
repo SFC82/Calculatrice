@@ -83,20 +83,32 @@ public class Student extends Person {
 			System.out.println("Das Buch annehmen");
 		}
 	}
-    public void location(Media x)
-    {
-        if(x.isVerfuegbar() && x.isInOrdnung())
-        {
-            System.out.println("The Student" + " "); //+ super.getName()+ " " + super.getSurname()+ " " + "with matricle" + " "+ matricle+ " " + "on the"+" "+ x.dateLoc);
-        }
-        else
-            System.out.println( "actually not available");
-    }
-    public static boolean reserved(Media x)
-    {
-            return x.isVerfuegbar() && x.isInOrdnung();
+	public Date  location (Media x,Date thisDate)
+	{
+		Date remiseDate= null;
+		Statut statut= x.getPosition();
 
-    }
+		switch (statut)
+		{
+			case VERKAUFT :
+				System.out.println(x + " wurde verkauft");
+			case VERMIETET:
+				System.out.println(x + " wurde schon vermietet");
+			case RESERVIERT:
+				System.out.println( x +"ist schon reserviert");
+			case VERFUEGBAR:
+				if (x.isInOrdnung())
+				{
+					System.out.print ("Media" + x +"has been rented on" + thisDate.toString());
+					thisDate.setMonth(thisDate.getMonth() + 2);// les mois vont de 0 a 11 et faire l'année -1900 avant de l'entrée.
+					remiseDate = thisDate;
+					System.out.print("Media" +x+ "must be returned on" + remiseDate.toString());
+					repertoire.remove(x);
+					x.setPosition(Statut.VERMIETET);
+				}
+		}
+		return remiseDate;
+	}
 
 
 
