@@ -109,7 +109,28 @@ public class Student extends Person {
 		}
 		return remiseDate;
 	}
-
+	public  void reservation(Media x)
+	{
+		if(repertoire.contains(x))
+		{
+			Date reservDate = new Date();
+			x.setPosition(Statut.RESERVIERT);
+			System.out.println("Sie haben das Media" + x+ "on" + reservDate + "reserviert");
+		}
+		else
+		{
+			Statut statut = x.getPosition();
+			switch (statut)
+			{
+				case RESERVIERT:
+					System.out.println("Das Media" +x+ "wurde reserviert");
+				case VERMIETET:
+					System.out.println("Das Media" + x+ "wurde vermietet" );
+				case VERKAUFT:
+					System.out.println("Das Media wurde verkauft");
+			}
+		}
+	}
 
 
 
