@@ -21,11 +21,13 @@ public class Student extends Person {
 	
 	public void acheter (int betrag,  Media  media) 
 	{
+		// Statut statut = Statut.RESERVIERT; //valeur par defaut 
 		 if(media.isVerfuegbar())
 		 {
+			 Statut statut = Statut.RESERVIERT; 
 			 if(media.isreserviert())
 			 {
-				 System.out.println("Media ist Sch�n reserviert");
+				 System.out.println(statut.name());//renvoi la valeur par defaut reserviert 
 			 }
 			 else 
 			 {
@@ -33,14 +35,15 @@ public class Student extends Person {
 				{
 					if(betrag>media.getfrais())
 					{
+						statut= Statut.INORDNUNG;
 						int remboursement = betrag - media.getfrais();
 						System.out.println("remboursement" +remboursement);
-						System.out.println("media ist in Ordnung");
+						System.out.println(statut.name());
 					}
 					else if(betrag == media.getfrais())
 					{
 						System.out.println(" merci pour votre Achat du" + media.getID());
-						System.out.println("media ist in Ordnung");
+						System.out.println(statut.name());
 					}
 					else
 					{
@@ -69,7 +72,7 @@ public class Student extends Person {
 		 }
 		 else 
 		 {
-			 System.out.println("nicht VBerfugbar");
+			 System.out.println("nicht Verfugbar");
 		 }
 	}
 	public void remettre(Media media)
